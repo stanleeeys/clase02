@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Registro";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Welcome back</h2>
+
+<style>
+    h1 {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 70px;
+        color: aquamarine;
+    }
+</style>
+
+<h1>@ViewBag.id</h1>
+
+@using (Html.BeginForm("save", "empleado", FormMethod.Post))
+ {
+    <label>ID</label>
+    <br />
+    <input type="text" name="id" value="@ViewBag.id" />
+
+    <form action="">
+        <label>Nombre de empleado</label>
+        <br>
+        <input type="text" name="nombre" required placeholder="Escribe tu nombre" value="@ViewBag.nombre">
+        <br>
+
+        <label for="dui">DUI</label>
+        <br>
+        <input type="number" name="dui" required placeholder="Escribe tu dui">
+        <br>
+
+        <label for="Telefono">Telefono</label>
+        <br>
+        <input type="tel" name="Telefono" required placeholder="Escribe tu Telefono">
+        <br>
+
+
+        <label for="correo">Correo</label>
+        <br>
+        <input type="email" name="correo" required placeholder="Escribe tu Correo">
+        <br>
+
+        <input type="submit">
+
+
+
+
+
+    </form>
+ }
+
+
+
+
